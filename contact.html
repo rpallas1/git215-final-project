@@ -5,23 +5,121 @@
         <meta name="author" content="Ryan Pallas">
         <!-- TODO: create description -->
         <meta name="description" content="Enter description here">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <!-- TODO: create favicon -->
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <title>Wok Asian Cuisine | Contact</title>
     </head>
     <body>
         <header>
+            <h1><a href="index.html">Wok Asian Cuisine</a></h1>
             <nav>
-
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Our Menu</a></li>
+                    <li><a href="#">Order Now</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
             </nav>
         </header>
         <main>
-            <form action="POST">
+            <h2>Contact Us</h2>
+            <p>Do you have dietary concerns? Questions about an upcoming event? Drop us a line, and we'll get back to you soon!</p>
+            <!-- TODO: alt text -->
+            <img src="images/contact-img-optional1.jpg" alt="">
+            <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
+                <label for="user-name">Name:*</label>
+                <input type="text" name="user-name" id="user-name" required>
+
+                <label for="user-address">Address:</label>
+                <input type="text" name="user-address" id="user-address">
+
+                <label for="user-city">City:</label>
+                <input type="text" name="user-city" id="user-city">
                 
+                <select name="user-state" id="user-state">
+                    <option value="">Choose Your State</option>
+                    <option value="al">AL</option>
+                    <option value="ak">AK</option>
+                    <option value="az">AZ</option>
+                    <option value="ar">AR</option>
+                    <option value="ca">CA</option>
+                    <option value="co">CO</option>
+                    <option value="ct">CT</option>
+                    <option value="de">DE</option>
+                    <option value="dc">DC</option>
+                    <option value="fl">FL</option>
+                    <option value="ga">GA</option>
+                    <option value="hi">HI</option>
+                    <option value="id">ID</option>
+                    <option value="il">IL</option>
+                    <option value="in">IN</option>
+                    <option value="ia">IA</option>
+                    <option value="ks">KS</option>
+                    <option value="ky">KY</option>
+                    <option value="la">LA</option>
+                    <option value="me">ME</option>
+                    <option value="md">MD</option>
+                    <option value="ma">MA</option>
+                    <option value="mi">MI</option>
+                    <option value="mn">MN</option>
+                    <option value="ms">MS</option>
+                    <option value="mo">MO</option>
+                    <option value="mt">MT</option>
+                    <option value="ne">NE</option>
+                    <option value="nv">NV</option>
+                    <option value="nh">NH</option>
+                    <option value="nj">NJ</option>
+                    <option value="nm">NM</option>
+                    <option value="ny">NY</option>
+                    <option value="nc">NC</option>
+                    <option value="nd">ND</option>
+                    <option value="oh">OH</option>
+                    <option value="ok">OK</option>
+                    <option value="or">OR</option>
+                    <option value="pa">PA</option>
+                    <option value="ri">RI</option>
+                    <option value="sc">SC</option>
+                    <option value="sd">SD</option>
+                    <option value="tn">TN</option>
+                    <option value="tx">TX</option>
+                    <option value="ut">UT</option>
+                    <option value="vt">VT</option>
+                    <option value="va">VA</option>
+                    <option value="wa">WA</option>
+                    <option value="wv">WV</option>
+                    <option value="wi">WI</option>
+                    <option value="wy">WY</option>
+                </select>
+
+                <label for="user-zip">Zip:</label>
+                <input type="number" name="user-zip" id="user-zip">
+
+                <label for="user-phone">Phone:*</label>
+                <input type="tel" name="user-phone" id="user-phone" required>
+
+                <label for="user-email">Email:*</label>
+                <input type="email" name="user-email" id="user-email">
+
+                <fieldset>
+                    <legend>Preferred Method of Contact?</legend>
+                    <label for="prefer-email">Email</label>
+                    <input type="radio" name="prefer-email" id="prefer-email" checked>
+
+                    <label for="prefer-tel">Phone</label>
+                    <input type="radio" name="prefer-tel" id="prefer-tel">
+                </fieldset>
+
+                <label for="user-comments">Comments:</label>
+                <textarea name="user-comments" id="user-comments" cols="30" rows="10"></textarea>
+
+                <input type="submit" value="Submit">
             </form>
+        </main>
         <footer>
-            
+            <h3>Wok Asian Cuisine</h3>
+            <p>Copyright &copy; 2022 Wok - All Rights Reserved</p>
+            <p>This site is for educational purposes only</p>
         </footer>
     </body>
 </html>
