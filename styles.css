@@ -1,4 +1,4 @@
-/* ---- START CSS Reset ---- */
+/* ------ START CSS Reset ------ */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -11,7 +11,7 @@ del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
+fieldset, form, label, input, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
@@ -47,10 +47,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* ---- END CSS Reset ---- */
+/* ------ END CSS Reset ------ */
 
 
-/* ---- VARIABLES ---- */
+/* ------ VARIABLES ------ */
 :root {
     --light-text-color: #f1eeee;
     --dark-text-color: #181a1e;
@@ -60,7 +60,7 @@ table {
     --secondary-color: #c58542;
 }
 
-/* ---- BODY ---- */
+/* ------ BODY ------ */
 body {
     width: 1280px;
     margin: 0 auto;
@@ -74,7 +74,7 @@ body {
     background-image: url("images/white_wall2.png");
 }
 
-/* ---- HEADER (Home and Contact) ---- */
+/* ------ HEADER (Home and Contact) ------ */
 header {
     grid-row: 1 / 2;
     width: 100%;
@@ -116,8 +116,18 @@ nav a {
 }
 
 nav a {
-    border-top: 3px solid #222;
-    border-bottom: 3px solid #222;
+    border-top: 3px double #222;
+    border-bottom: 3px double #222;
+}
+
+.home-page-nav {
+    border: 3px double var(--accent-color);
+    border-radius: 4px;
+}
+
+.contact-page-nav {
+    border: 3px double rgb(2, 2, 195);
+    border-radius: 4px;
 }
 
 .home-nav:hover {
@@ -125,29 +135,35 @@ nav a {
     border-bottom: 3px solid var(--accent-color);
 }
 
+.home-page-nav:hover {
+    border: 3px solid var(--accent-color);
+
+}
+
 .menu-nav:hover {
     border-top: 3px solid var(--secondary-color);
     border-bottom: 3px solid var(--secondary-color);
-    box-shadow: none;
 }
 
 .order-nav:hover {
     border-top: 3px solid green;
     border-bottom: 3px solid green;
-    box-shadow: none;
 }
 
 .contact-nav:hover {
     border-top: 3px solid rgb(2, 2, 195);
     border-bottom: 3px solid rgb(2, 2, 195);
-    box-shadow: none;
+}
+
+.contact-page-nav:hover {
+    border: 3px solid rgb(2, 2, 195);
 }
 
 nav a:active {
     transform: scale(0.95);
 }
 
-/* ---- MAIN (Home)---- */
+/* ----- MAIN (Home)------ */
 main {
     grid-row: 2 / 3;
     display: grid;
@@ -188,6 +204,7 @@ h2 {
     padding: 10px;
     border: 2px solid var(--secondary-color);
     color: var(--dark-text-color);
+    border-radius: 4px;
 }
 
 .our-menu:hover {
@@ -260,7 +277,7 @@ p {
 }
 
 
-/* ---- MAIN (Contact) ---- */
+/* ------ MAIN (Contact) ------ */
 .contact-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -287,11 +304,13 @@ p {
 
 form {
     grid-area: 3 / 1 / 5 / 3;
-    width: 1100px;
-    height: 560px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    width: 1000px;
+    height: 680px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
     margin: 15px auto;
     background-color: var(--background-color);
     padding: 16px;
@@ -299,6 +318,24 @@ form {
     border-radius: 4px;
 }
 
+/* ---- Form Grid Layout ---- */
+.contact-address {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.contact-city {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+#user-state {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.contact-comments {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+/* ---- Form Styling ---- */
 input, label, select, textarea, fieldset {
     display: block;
     width: 400px;
@@ -331,19 +368,24 @@ legend {
 
 fieldset label {
     margin-left: 30px;
-    margin: 10px 0 10px 30px;
+    margin: 10px 0 10px 35px;
     cursor: pointer;
 }
 
 fieldset input {
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
     font-weight: bold;
     margin: -30px 10px 10px 8px;
     cursor: pointer;
+} 
+
+textarea {
+    resize: none;
 }
 
 input[type=submit] {
+    grid-area: 6 / 1 / 7 / 3;
 	background-color: var(--secondary-color);
 	border: none;
 	color: white;
@@ -352,12 +394,15 @@ input[type=submit] {
 	box-shadow: 6px 6px 10px var(--dark-text-color);
     border-radius: 4px;
     width: 200px;
-    margin-top: 80px;
 }
 
 input[type=submit]:hover {
     box-shadow: 3px 3px 5px #363432;
     cursor: pointer;
+}
+
+input[type=submit]:focus {
+	background-color: var(--secondary-color);
 }
 
 input[type=submit]:active {
@@ -375,7 +420,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 
-/* ---- FOOTER (Home and Contact)---- */
+/* ------ FOOTER (Home and Contact) ------ */
 footer {
     grid-row: 3 / 4;
     width: 100%;
