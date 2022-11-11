@@ -15,18 +15,21 @@
             <h1><a href="index.html">Wok Asian Cuisine</a></h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Our Menu</a></li>
-                    <li><a href="#">Order Now</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a class="home-nav" href="index.html">Home</a></li>
+                    <li><a class="menu-nav" href="#">Our Menu</a></li>
+                    <li><a class="order-nav" href="#">Order Now</a></li>
+                    <li><a class="contact-nav" href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <h2>Contact Us</h2>
-            <p>Do you have dietary concerns? Questions about an upcoming event? Drop us a line, and we'll get back to you soon!</p>
+        <main class="contact-main">
+            <!-- <div class="intro-background"> -->
+                <h2 class="contact-h2">Contact Us</h2>
+                <p class="contact-p">Do you have dietary concerns? Questions about an upcoming event? Drop us a line, and we'll get back to you soon!</p>
+            <!-- </div> -->
+
             <!-- TODO: alt text -->
-            <img src="images/contact-img-optional1.jpg" alt="">
+            <img class="contact-img" src="images/contact-img-optional1.jpg" alt="">
             <form action="https://wp.zybooks.com/form-viewer.php" method="POST">
                 <label for="user-name">Name:*</label>
                 <input type="text" name="user-name" id="user-name" required>
@@ -99,19 +102,19 @@
                 <input type="tel" name="user-phone" id="user-phone" required>
 
                 <label for="user-email">Email:*</label>
-                <input type="email" name="user-email" id="user-email">
+                <input type="email" name="user-email" id="user-email" required>
 
                 <fieldset>
-                    <legend>Preferred Method of Contact?</legend>
+                    <legend>Preferred Method of Contact</legend>
                     <label for="prefer-email">Email</label>
-                    <input type="radio" name="prefer-email" id="prefer-email" checked>
+                    <input type="radio" name="prefer" id="prefer-email" checked>
 
                     <label for="prefer-tel">Phone</label>
-                    <input type="radio" name="prefer-tel" id="prefer-tel">
+                    <input type="radio" name="prefer" id="prefer-tel">
                 </fieldset>
 
                 <label for="user-comments">Comments:</label>
-                <textarea name="user-comments" id="user-comments" cols="30" rows="10"></textarea>
+                <textarea name="user-comments" id="user-comments" cols="15" rows="6"></textarea>
 
                 <input type="submit" value="Submit">
             </form>
