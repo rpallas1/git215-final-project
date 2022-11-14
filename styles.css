@@ -57,6 +57,8 @@ table {
     --background-color: #f1eeee;
     --accent-color: #8d1010;
     --secondary-color: #c58542;
+    --order-nav-border: green;
+    --contact-nav-border: rgb(2, 2, 195);
 }
 
 /* ------ BODY ------ */
@@ -112,11 +114,13 @@ nav a {
     margin: 0 50px;
     padding: 5px;
     color: var(--dark-text-color);
+    border-left: 3px double rgba(255, 255, 255, 0);
+    border-right: 3px double rgba(255, 255, 255, 0);
 }
 
 nav a {
-    border-top: 3px double #222;
-    border-bottom: 3px double #222;
+    border-top: 3px double var(--dark-text-color);
+    border-bottom: 3px double var(--dark-text-color);
 }
 
 .home-page-nav {
@@ -125,42 +129,58 @@ nav a {
 }
 
 .contact-page-nav {
-    border: 3px double rgb(2, 2, 195);
+    border: 3px double var(--contact-nav-border);
     border-radius: 4px;
 }
 
 .home-nav:hover {
-    border-top: 3px solid var(--accent-color);
-    border-bottom: 3px solid var(--accent-color);
+    border: 3px double var(--accent-color);
+    border-radius: 4px;
+}
+
+.home-nav:active {
+    border: 3px solid var(--accent-color);
 }
 
 .home-page-nav:hover {
     border: 3px solid var(--accent-color);
-
 }
 
 .menu-nav:hover {
-    border-top: 3px solid var(--secondary-color);
-    border-bottom: 3px solid var(--secondary-color);
+    border: 3px double var(--secondary-color);
+    border-radius: 4px;
+}
+
+.menu-nav:active {
+    border: 3px solid var(--secondary-color);
 }
 
 .order-nav:hover {
-    border-top: 3px solid green;
-    border-bottom: 3px solid green;
+    border: 3px double var(--order-nav-border);
+    border-radius: 4px;
+}
+
+.order-nav:active {
+    border: 3px solid var(--order-nav-border);
 }
 
 .contact-nav:hover {
-    border-top: 3px solid rgb(2, 2, 195);
-    border-bottom: 3px solid rgb(2, 2, 195);
+    border: 3px double var(--contact-nav-border);
+    border-radius: 4px;
+}
+
+.contact-nav:active {
+    border: 3px solid var(--contact-nav-border);
 }
 
 .contact-page-nav:hover {
-    border: 3px solid rgb(2, 2, 195);
+    border: 3px solid var(--contact-nav-border);
 }
 
 nav a:active {
     transform: scale(0.95);
 }
+
 
 /* ----- MAIN (Home)------ */
 main {
@@ -393,6 +413,7 @@ input[type=submit] {
 	box-shadow: 6px 6px 10px var(--dark-text-color);
     border-radius: 4px;
     width: 200px;
+    margin-top: -15px;
 }
 
 input[type=submit]:hover {
