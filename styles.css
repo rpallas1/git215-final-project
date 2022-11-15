@@ -12,7 +12,7 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, input, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
+table, caption, textarea, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
@@ -64,7 +64,9 @@ table {
 
 /* ------ BODY ------ */
 body {
-    width: 1280px;
+    /* subtract 30 to allow padding */
+    width: 1250px;
+    padding: 15px;
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--dark-text-color);
@@ -305,7 +307,7 @@ p {
 .contact-img {
     grid-area: 1 / 2 / 3 / 3;
     margin: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .contact-h2, .contact-p {
@@ -418,7 +420,7 @@ input[type=submit] {
 	box-shadow: 6px 6px 10px var(--dark-text-color);
     border-radius: 4px;
     width: 200px;
-    margin-top: -15px;
+    margin-top: -8px;
 }
 
 input[type=submit]:hover {
