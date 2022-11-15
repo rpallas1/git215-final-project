@@ -57,8 +57,9 @@ table {
     --background-color: #f1eeee;
     --accent-color: #8d1010;
     --secondary-color: #c58542;
-    --order-nav-border: green;
-    --contact-nav-border: rgb(2, 2, 195);
+    --order-nav-border: rgb(42, 97, 42);
+    --contact-nav-border: #2a457c;
+    --color: rgb(2, 2, 195);
 }
 
 /* ------ BODY ------ */
@@ -71,7 +72,6 @@ body {
     grid-template-rows: 200px 1fr 130px;
     justify-items: center;
     line-height: 1.5;
-    padding: 12px;
     background-image: url("images/white_wall2.png");
 }
 
@@ -116,18 +116,17 @@ nav a {
     color: var(--dark-text-color);
     border-left: 3px double rgba(255, 255, 255, 0);
     border-right: 3px double rgba(255, 255, 255, 0);
-}
-
-nav a {
     border-top: 3px double var(--dark-text-color);
     border-bottom: 3px double var(--dark-text-color);
 }
 
+/* Shows what page you are one */
 .home-page-nav {
     border: 3px double var(--accent-color);
     border-radius: 4px;
 }
 
+/* Shows what page you are on */
 .contact-page-nav {
     border: 3px double var(--contact-nav-border);
     border-radius: 4px;
@@ -306,6 +305,7 @@ p {
 .contact-img {
     grid-area: 1 / 2 / 3 / 3;
     margin: 10px;
+    width: 90%;
 }
 
 .contact-h2, .contact-p {
@@ -319,6 +319,7 @@ p {
 
 .contact-p {
     padding: 15px;
+    margin: 10px;
 }
 
 form {
@@ -398,6 +399,10 @@ fieldset input {
     margin: -30px 10px 10px 8px;
     cursor: pointer;
 } 
+
+input[type=radio]:focus {
+    outline: initial;
+}
 
 textarea {
     resize: none;
