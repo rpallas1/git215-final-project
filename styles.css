@@ -57,18 +57,13 @@ table {
     --background-color: #f1eeee;
     --accent-color: #8d1010;
     --secondary-color: #c58542;
-    --order-nav-border: rgb(42, 97, 42);
+    --order-nav-border: #2a612a;
     --contact-nav-border: #2a457c;
-
-    /* subtract padding * 2 from total width (1280px) */
-    --body-padding: 15px;
-    --page-width: calc(1280px - (var(--body-padding) * 2));
 }
 
 /* ------ BODY ------ */
 body {
-    width: var(--page-width);
-    padding: var(--body-padding);
+    width: 1280px;
     margin: 0 auto;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--dark-text-color);
@@ -125,13 +120,13 @@ nav a {
     border-bottom: 3px double var(--dark-text-color);
 }
 
-/* Shows what page you are one */
+/* Shows what page you are one (home page) */
 .home-page-nav {
     border: 3px double var(--accent-color);
     border-radius: 4px;
 }
 
-/* Shows what page you are on */
+/* Shows what page you are on (contact page) */
 .contact-page-nav {
     border: 3px double var(--contact-nav-border);
     border-radius: 4px;
@@ -187,7 +182,7 @@ nav a:active {
 
 
 /* ----- MAIN (Home)------ */
-.home-page {
+.home-main {
     grid-row: 2 / 3;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -199,7 +194,7 @@ nav a:active {
 
 .header-img {
     grid-area: 1 / 1 / 2 / 5;
-    width: var(--page-width);
+    width: 1280px;
     height: auto;
 }
 
@@ -257,6 +252,7 @@ p {
     font-size: 1.17rem;
     line-height: 1.5;
     max-width: 42ch;
+    margin: 0 auto;
 }
 
 .grid {
@@ -276,11 +272,6 @@ p {
 .grid h3 {
     border-bottom: 2px dotted var(--secondary-color);
     width: 50%;
-    margin: 0 auto;
-}
-
-.grid p {
-    max-width: 42ch;
     margin: 0 auto;
 }
 
@@ -336,7 +327,7 @@ form {
     height: 680px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
     align-items: center;
     justify-items: center;
     margin: 15px auto;
@@ -440,7 +431,7 @@ input[type=submit]:focus {
 
 input[type=submit]:active {
     box-shadow: 1px 1px 2.5px #363432;
-    background-color: var(--secondary-color);
+    outline: initial;
 }
 
 input:invalid, select:invalid, textarea:invalid {
